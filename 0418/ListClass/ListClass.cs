@@ -54,7 +54,7 @@ namespace _0418.ListClass
             }
             
         }
-        public T? Find(Predicate<T> match)
+        public T? Find(Predicate<T> match)                  //이해가 애매합니다
         {
             if (match == null)
                 throw new ArgumentNullException("match");
@@ -68,7 +68,7 @@ namespace _0418.ListClass
             return default(T);
         }
 
-        public int FindIndex(Predicate<T> match)
+        public int FindIndex(Predicate<T> match)            //이해가 애매합니다
         {
             for (int i = 0; i < size; i++)
             {
