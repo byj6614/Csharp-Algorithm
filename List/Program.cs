@@ -1,4 +1,6 @@
-﻿namespace List
+﻿using DataStructure;
+
+namespace List
 {
     internal class Program
     {
@@ -33,8 +35,9 @@
 		 ******************************************************/
 
         // <List의 사용>
-        void List()
+        /* void List()
         {
+           
             List<string> list = new List<string>();
 
             // 배열 요소 삽입
@@ -52,14 +55,20 @@
             // 배열 요소 탐색
             string? findValue = list.Find(x => x.Contains('2'));
             int findIndex = list.FindIndex(x => x.Contains('0'));
-        }
+    }*/
 
         // <List의 시간복잡도>
         // 접근		탐색		삽입		삭제
         // O(1)		O(n)	O(n)	O(n)
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            ListClass<string> listClass = new ListClass<string>();
+            listClass.Add("a");
+            listClass.Add("b");
+            listClass.Add("c");
+            listClass.Add("d");
+            listClass.Add("e");
+
         }
     }
 }
