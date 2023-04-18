@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace _0418
+namespace _0418.ListClass
 {
     internal class ListClass
     {
