@@ -106,7 +106,7 @@ namespace DataStructure
             for(int i=0;i<size;i++)
             {
                 if (match(items[i]))
-                    return 1;
+                    return i;
             }
             return -1;
         }
