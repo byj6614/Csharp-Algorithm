@@ -69,28 +69,28 @@ namespace _0418.ListClass
             }
             
         }
-        public T? Find(Predicate<T> match)                  //이해가 애매합니다
+        public T? Find(Predicate<T> match)                  //Predicate로 bool형 함수를 대리자를 통해 받는다
         {
-            if (match == null)
+            if (match == null)                    //bool형이 아닌 값이 들어갔을 때 오류를 출력
                 throw new ArgumentNullException("match");
-            for (int i = 0; i < size; i++)
+            for (int i = 0; i < size; i++)  //배열에 있는 값을 순서대로 확인하기
             {
-                if (match(array[i]))
+                if (match(array[i]))        //match가 true인지 확인
                 {
-                    return array[i];
+                    return array[i];        //true면 array[i]의 값을 내보낸다
                 }
             }
-            return default(T);
+            return default(T);          //false 면 null을 내보낸다
         }
 
-        public int FindIndex(Predicate<T> match)            //이해가 애매합니다
+        public int FindIndex(Predicate<T> match)            //Predicate로 bool형 함수를 대리자를 통해 받는다
         {
             for (int i = 0; i < size; i++)
             {
-                if (match(array[i]))
-                    return i;
+                if (match(array[i]))        //true 값을 받는지 확인
+                    return i;               //true 였을때 i값을 내보내기
             }
-            return -1;
+            return -1;                  //flase일 때 -1 내보내기
         }
         public void RemoveAt(int index)
         {
