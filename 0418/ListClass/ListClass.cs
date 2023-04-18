@@ -17,6 +17,5 @@ namespace _0418.ListClass
             this.array = new T[arnum];              // 인스턴스를 생성 할때 만들어지는 배열
             this.size = 0;                          // 인스턴스를 생성 하면서 생기는 사이즈
         }
-        
     }
 }
