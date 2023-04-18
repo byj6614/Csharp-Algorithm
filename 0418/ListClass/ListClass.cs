@@ -17,6 +17,21 @@ namespace _0418.ListClass
             this.array = new T[arnum];              // 인스턴스를 생성 할때 만들어지는 배열
             this.size = 0;                          // 인스턴스를 생성 하면서 생기는 사이즈
         }
+        public T this[int index]            //array[index]의 값을 넣거나 쓰기위한것
+        {
+            get
+            {
+                if (index < 0 || index >= size)
+                    throw new IndexOutOfRangeException();
+                return array[index];
+            }
+            set
+            {
+                if (index < 0 || index >= size)
+                    throw new IndexOutOfRangeException();
+                array[index] = value;
+            }
+        }
         public int Count                //배열의 길이를 알기 위한 
         {
             get                 //Count를 실행했을때 size를 쓴다
