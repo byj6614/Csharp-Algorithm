@@ -75,9 +75,9 @@ namespace _DataStructer
         public void AddFirst(T node)
         {
             //노드 생성
-            LinkedListNode<T> newNode =new LinkedListNode<T>(this, node);
+            LinkedListNode<T> newNode = new LinkedListNode<T>(this, node);
             //노드 연결
-            if (head!=null)
+            if (head != null)
             {
                 newNode.next = head;            //newNode의 next에 head 주소를 넣는다.
                 head = newNode;                 //head는 이제 newNode이므로 head에 newNd
@@ -93,9 +93,9 @@ namespace _DataStructer
         public void AddLast(T node)
         {
             //노드 생성
-            LinkedListNode<T> newNode=new LinkedListNode<T>(this, node);
+            LinkedListNode<T> newNode = new LinkedListNode<T>(this, node);
             //노드 연결
-            if (tail!=null)
+            if (tail != null)
             {
                 newNode.prev = tail;        //newNode가 꼬리가 되어야 하므로 전에 주소에 tail을 넣는다.
                 tail = newNode;             //newNode가 꼬리이므로 tail에 newNode 주소를 넣는다.
@@ -108,7 +108,7 @@ namespace _DataStructer
             //LinkedList 의 크기 증가
             count++;
         }
-        public void AddBefore(LinkedListNode<T> before,T value)//(새로운 노드 뒤에.next, 새 노드에 들어갈 값)
+        public void AddBefore(LinkedListNode<T> before, T value)//(새로운 노드 뒤에.next, 새 노드에 들어갈 값)
         {
             if (before.list != this)//예외1 : node가 linkedList에 포함된 노드가 아닌경우
                 throw new InvalidOperationException();
@@ -116,12 +116,12 @@ namespace _DataStructer
             if (before == null)//예외2 : 노드가 null인 경우
                 throw new ArgumentNullException(nameof(before));
             //노드 생성
-            LinkedListNode<T> newnode = new LinkedListNode<T>(this,value);
+            LinkedListNode<T> newnode = new LinkedListNode<T>(this, value);
             //노드 연결
-            if(head==before)//before가 head일 경우
+            if (head == before)//before가 head일 경우
             {
-                before.prev= newnode;
-                newnode.next= before;
+                before.prev = newnode;
+                newnode.next = before;
                 head = newnode;
             }
             else
@@ -134,7 +134,7 @@ namespace _DataStructer
             //LinkedList의 크기 증가
             count++;
         }
-        public void AddAfter(LinkedListNode<T> after,T value)
+        public void AddAfter(LinkedListNode<T> after, T value)
         {
             if (after.list != this)//예외1 : node가 linkedList에 포함된 노드가 아닌경우
                 throw new InvalidOperationException();
@@ -142,19 +142,19 @@ namespace _DataStructer
             if (after == null)//예외2 : 노드가 null인 경우
                 throw new ArgumentNullException(nameof(after));
             //노드 생성
-            LinkedListNode<T> newNode= new LinkedListNode<T>(this,value);
+            LinkedListNode<T> newNode = new LinkedListNode<T>(this, value);
             //노드 연결
-            if(tail==after) //after가 tail일 경우
+            if (tail == after) //after가 tail일 경우
             {
                 newNode.prev = after;   //newNode전에 after가 연결된다
                 after.next = newNode;   //after다음에 newNode가 연결되어 after와 newNode가 서로 연결됨
-                tail= newNode;          //newNode를 꼬리로 만든다
+                tail = newNode;          //newNode를 꼬리로 만든다
             }
             else
             {
                 after.next.prev = newNode;      //after.next의 prev에 newNode를 넣기
                 newNode.next = after.next;      //newnode.next에 after.next를 넣기
-                after.next= newNode;            //after.next에 newnode를 넣기
+                after.next = newNode;            //after.next에 newnode를 넣기
                 newNode.prev = after;           //newNode.prev에 after를 넣기
             }
             //LinkedList의 크기 증가
@@ -179,7 +179,7 @@ namespace _DataStructer
                 node.next.prev = node.prev;       //node(지우려는것).next(다음의).prev(이전)
             //LinkedList 노드감소
             count--;
-            
+
 
         }
         public bool Remove(T value)
@@ -198,13 +198,36 @@ namespace _DataStructer
         public LinkedListNode<T> Find(T value)
         {
             LinkedListNode<T> target = head;        //value가 들어가 있는 list의 head를 target에 주소복사
-            EqualityComparer<T> comparer = EqualityComparer<T>.Default;     
+            EqualityComparer<T> comparer = EqualityComparer<T>.Default;
             while (target != null)  //target에 null이 발견될때까지 반복
             {
                 if (comparer.Equals(value, target.Item))//Equals를 통해 value와 target.Item의 개체가 같은지 확인 같을시 true 아닐시 false
                     return target;  //true일시 target을 내보낸다
                 else
                     target = target.next; //target의 next를 보기위해 null이 나올때까지
+            }
+            return null;
+        }
+
+        public bool Contains(T value)   //value값이 있는지 확인 하는 함수
+        {
+            LinkedListNode<T>? node = Find(value);
+            if (node != null)
+                return true;
+            else
+                return false;
+        }
+
+        public LinkedListNode<T> FindLast(T value)  //List에서 value가 포함된 가장 뒤에 있는 노드를 찾는 함수
+        {
+            LinkedListNode<T> target = tail;    //find가 앞에서기 때문에 가장뒤에 잇는 노드를 찾기 때문에 tail부터 찾는다.
+            EqualityComparer<T> comparer = EqualityComparer<T>.Default;
+            while (target != null)
+            {
+                if (comparer.Equals(value, target.Item))
+                    return target;
+                else
+                    target= target.prev;    //tail에서 부터 전으로 이동하며 찾는다.
             }
             return null;
         }
