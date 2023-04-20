@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "List", "List\List.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0418", "0418\0418.csproj", "{DC948E0F-43E2-4AE0-8129-F061973E144C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LinkedList", "LinkedList\LinkedList.csproj", "{7AA7550B-12DA-4187-96A4-B7F6253AFBD5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LinkedList", "LinkedList\LinkedList.csproj", "{7AA7550B-12DA-4187-96A4-B7F6253AFBD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0419", "0419\0419.csproj", "{21069FB3-6B8A-4E96-AE94-51E2A9F2EC00}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0419", "0419\0419.csproj", "{21069FB3-6B8A-4E96-AE94-51E2A9F2EC00}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Iterator", "Iterator\Iterator.csproj", "{9F4E8AEC-F905-426A-84F2-CB296CEF832E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{21069FB3-6B8A-4E96-AE94-51E2A9F2EC00}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21069FB3-6B8A-4E96-AE94-51E2A9F2EC00}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21069FB3-6B8A-4E96-AE94-51E2A9F2EC00}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F4E8AEC-F905-426A-84F2-CB296CEF832E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F4E8AEC-F905-426A-84F2-CB296CEF832E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F4E8AEC-F905-426A-84F2-CB296CEF832E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F4E8AEC-F905-426A-84F2-CB296CEF832E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
