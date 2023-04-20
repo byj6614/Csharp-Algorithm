@@ -128,18 +128,18 @@ namespace ABC
             return new Enumerator(this);
         }
 
-        public struct Enumerator : IEnumerator<T>
+        public struct Enumerator : IEnumerator<T>       //class가 아닌 struct로 구현 하는건 가리키는 '값'이기 때문
         {
-            private List<T> list;
-            private int index;
-            private T current;
-            public Enumerator(List<T> list)
+            private List<T> list;                   //list를 지정하기위한 변수
+            private int index;                      //List 배열의 위치를 지정하는 변수
+            private T current;                      //list[index]의 값을 넣기 위한 변수
+            public Enumerator(List<T> list)         //초기화
             {
-                this.list = list;
-                this.index = 0;
-                this.current=default(T);
+                this.list = list;                   //list에 List<T> list를 넣는다.
+                this.index = 0;                     //배열 시작위치는 0부터 이기 때문에 0을 넣는다.
+                this.current=default(T);            //배열이 아닌 위치이니 default(T)를 넣어 아무것도 없는것으로 한다.
             }
-            public T Current { get { return current; } }
+            public T Current { get { return current; } }        //aaa.Current시 current를 내보낸다.
 
             object IEnumerator.Current => throw new NotImplementedException();
 
@@ -148,16 +148,16 @@ namespace ABC
              
             }
 
-            public bool MoveNext()
+            public bool MoveNext()                      //배열의 앞으로 이동하기 위한 함수
             {
-                if (index < 0||index>= list.Count)
+                if (index < 0||index>= list.Count)      //배열은 0부터 시작해서 Count-1까지 있으므로 그아래거아 이상이면 값이 존재하지 않는다는 뜻
                 {
                     current = default(T);
                     return false;
                 }
                 else
                 {
-                    current= list[index++];
+                    current= list[index++];             //가르키는 인덱스의 값을 옮기기전에 current에 기존 값을 넣고 인덱스를 옮긴다.
                     return true;
                 }
                
@@ -165,9 +165,9 @@ namespace ABC
                
             }
 
-            public void Reset()
+            public void Reset()                         //Reset을 통해 처음으로 돌아간다.
             {
-                current = default(T);
+                current = default(T);                   //처음으로 돌아가기 때문에 index는0을 current는 아무것도 없는 상태로 만든다.
                 index = 0;
             }
         }
