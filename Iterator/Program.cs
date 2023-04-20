@@ -11,12 +11,12 @@ namespace Iterator
 		 ******************************************************/
         //처음부터 끝까지 하나하나 찾아봤을 때 있는지 확인해보기
         //
-        void Main(string[] args)
+        void Iterator()
         {
             //대부분의 자료구조가 반복기를 지원        //(없는것도 있음)
             //반복기를 이용한 기능을 구현할 경우, 그 기능은 대부분의 자료구조를 호환할 수 있음
-            List<int> list = new List<int>();                              
-            LinkedList<int> linkedList = new LinkedList<int>();            
+            System.Collections.Generic.List<int> list = new System.Collections.Generic.List<int>();
+            LinkedList<int> linkedList = new LinkedList<int>();
             Stack<int> stack = new Stack<int>();
             Queue<int> queue = new Queue<int>();
             SortedList<int, int> sList = new SortedList<int, int>();
@@ -28,7 +28,7 @@ namespace Iterator
             // foreach 반복문은 데이터집합의 반복기를 통해서 단계별로 반복            
             // 즉, 반복기가 있다면 foreach 반복문으로 순회 가능 
             foreach (int i in list) { }
-            foreach (int i in linkedList) { }
+            //foreach (int i in linkedList) { }
             foreach (int i in stack) { }
             foreach (int i in queue) { }
             foreach (int i in set) { }
@@ -39,7 +39,7 @@ namespace Iterator
 
 
             // 반복기 직접조작
-            List<string> strings = new List<string>();
+            System.Collections.Generic.List<string> strings = new System.Collections.Generic.List<string>();
             for (int i = 0; i < 5; i++) strings.Add($"{i}데이터");
 
             IEnumerator<string> iter = strings.GetEnumerator(); //GetEnumerator()반복기를 주는것
@@ -63,6 +63,31 @@ namespace Iterator
             yield return 1;
             yield return 2;
             yield return 3;
+        }
+        static void Main(string[] args)
+        {
+            /*Abc.List<int> list= new Abc.List<int>();
+            for(int i=1;i<=5;i++) 
+                list.Add(i);
+            IEnumerator<int> iter = list.GetEnumerator();
+            Console.WriteLine(iter.Current);
+            while(iter.MoveNext())
+            {
+                Console.WriteLine(iter.Current);
+            }
+            foreach(int i in list)
+            {
+                Console.WriteLine(i);
+            }*/
+            Abc.LinkedList<int> list = new Abc.LinkedList<int>();
+            for (int i = 1; i <= 5; i++) 
+            {
+                list.AddLast(i);
+            }
+            foreach(int i in list)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
