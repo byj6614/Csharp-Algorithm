@@ -58,6 +58,16 @@ namespace Iterator
                 Console.WriteLine(iter.Current);
             }
         }
+        public static int Max(IEnumerable<int> list)
+        {
+            int max = int.MinValue;
+            foreach (int i in list)
+            {
+                if(max< i) max = i;
+
+            }
+            return max;
+        }
         IEnumerable<int> IterFunc()
         {
             yield return 1;
