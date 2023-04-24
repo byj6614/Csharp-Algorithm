@@ -19,9 +19,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0420", "0420\0420.csproj", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Stack", "Stack\Stack.csproj", "{0692FA5F-61B5-49F0-B68C-6EF844CDFCF4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Queue", "Queue\Queue.csproj", "{5582F85B-C204-42D4-9388-F20FB4E6D461}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Queue", "Queue\Queue.csproj", "{5582F85B-C204-42D4-9388-F20FB4E6D461}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0421", "0421\0421.csproj", "{5ED6668E-03C3-4722-9DA3-C01BF397CBD3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0421", "0421\0421.csproj", "{5ED6668E-03C3-4722-9DA3-C01BF397CBD3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Heap", "Heap\Heap.csproj", "{D08F4876-656D-450E-AC01-C73F87964B60}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{5ED6668E-03C3-4722-9DA3-C01BF397CBD3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5ED6668E-03C3-4722-9DA3-C01BF397CBD3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5ED6668E-03C3-4722-9DA3-C01BF397CBD3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D08F4876-656D-450E-AC01-C73F87964B60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D08F4876-656D-450E-AC01-C73F87964B60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D08F4876-656D-450E-AC01-C73F87964B60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D08F4876-656D-450E-AC01-C73F87964B60}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
