@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _0424.Heap
 {
-    internal class Heap
+    internal class PriorityQueue
     {
     }
 }
