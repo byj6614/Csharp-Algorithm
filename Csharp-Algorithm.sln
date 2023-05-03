@@ -51,6 +51,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "0502", "0502\0502.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PathFinding", "PathFinding\PathFinding.csproj", "{67851CF5-C1C8-4F40-9816-4E80EF044099}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "0503", "0503\0503.csproj", "{50270EFB-FDBC-405C-BAC9-A09F295CDB8D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -153,6 +155,10 @@ Global
 		{67851CF5-C1C8-4F40-9816-4E80EF044099}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67851CF5-C1C8-4F40-9816-4E80EF044099}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67851CF5-C1C8-4F40-9816-4E80EF044099}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50270EFB-FDBC-405C-BAC9-A09F295CDB8D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50270EFB-FDBC-405C-BAC9-A09F295CDB8D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50270EFB-FDBC-405C-BAC9-A09F295CDB8D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50270EFB-FDBC-405C-BAC9-A09F295CDB8D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
