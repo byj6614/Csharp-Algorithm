@@ -50,13 +50,15 @@ namespace Project_TextRPG
             //slime1.pos = new Position(3, 5);
             //monsters.Add(slime1);
         }
-        public static Monster MonsterInPos(Position pos)
+        /*public static Monster MonsterInPos(Position pos)
         {
             Monster monster=monsters.Find(tartget => tartget.pos.x == pos.x && tartget.pos.y == pos.y);
             return monster;
 
-        }
+        }*/
 
+     
+        
     }
 
     

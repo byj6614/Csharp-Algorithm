@@ -37,7 +37,7 @@ namespace Project_TextRPG
                     break;
 
             }
-            Monster monsterInPos = Data.MonsterInPos(Data.player.pos);
+           /* Monster monsterInPos = Data.MonsterInPos(Data.player.pos);
             if(monsterInPos != null)
             {
                 game.BattleStart(monsterInPos);
@@ -52,7 +52,7 @@ namespace Project_TextRPG
                     game.BattleStart(monster);
                     return;
                 }
-            }
+            }*/
         }
         
         private void PrintMap()
@@ -73,7 +73,7 @@ namespace Project_TextRPG
 
             Console.WriteLine(sb.ToString());
 
-            Console.ForegroundColor = ConsoleColor.Green;
+           // Console.ForegroundColor = ConsoleColor.Green;
           /*  foreach(Monster monster in Data.monsters)
             {
                 Console.SetCursorPosition(monster.pos.x,monster.pos.y);
