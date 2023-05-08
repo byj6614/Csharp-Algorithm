@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project_TextRPG.JOB
+namespace Bae_TexTRPG.Potion
 {
-    public static class Archer
+    internal class MiddlePotion
     {
     }
 }

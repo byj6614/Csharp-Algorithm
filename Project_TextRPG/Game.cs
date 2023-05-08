@@ -12,6 +12,7 @@ namespace Project_TextRPG
         private bool running = true;
 
         private Scene curScene;
+        private JobScene jobScene;
         private MainMenuScene mainmenuScene;
         private MapScene mapScene;
         private InventoryScene inventoryScene;
@@ -40,10 +41,14 @@ namespace Project_TextRPG
             mapScene = new MapScene(this);
             inventoryScene = new InventoryScene(this);
             battleScene = new BattleScene(this);
-
+            jobScene = new JobScene(this);
             curScene = mainmenuScene;
         }
 
+        public void ChoseJob()
+        {
+
+        }
         public void GameStart()
         {
             Data.LoadLevel();

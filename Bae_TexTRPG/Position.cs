@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Project_TextRPG
+namespace Bae_TexTRPG
 {
     public struct Position
     {
@@ -19,4 +19,4 @@ namespace Project_TextRPG
     }
 }
 
-public enum Direction {Up, Down, Left ,Right}
+public enum Direction { Up, Down ,Left,Right}

@@ -4,15 +4,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bae_TexTRPG.Scene
+namespace Bae_TexTRPG
 {
-    public class Job : Scene
+    public class JobScene : Scene
     {
-        public Job(Game game) : base(game)
+        public JobScene(Game game) : base(game)
         {
 
         }
-        public enum Myclass { None, Knight, Archer, Mage }
+        
         public override void Render()
         {
             Console.Clear();
@@ -36,18 +36,30 @@ namespace Bae_TexTRPG.Scene
                     return;
                 }
 
-                Myclass choice = Myclass.None;
+                
                 switch (command)
                 {
-                    case 1:
-                            choice = Myclass.Knight;
-                            break;
+                        case 1:
+                            Data.player.icon = Data.knight.Icon();
+                    Data.player.playerjob = Data.knight;
+                    Console.WriteLine("기사를 골랐습니다.");
+                    Thread.Sleep(1000);
+                    game.GameStart();
+                    break;
                         case 2:
-                            choice = Myclass.Archer;
-                            break;
+                           Data.player.icon= Data.archer.Icon();
+                    Data.player.playerjob = Data.archer;
+                    Console.WriteLine("궁수를 골랐습니다.");
+                    Thread.Sleep(1000);
+                    game.GameStart();
+                    break;
                         case 3:
-                            choice = Myclass.Mage;
-                            break;
+                           Data.player.icon=Data.Mage.Icon();
+                    Data.player.playerjob = Data.Mage;
+                    Console.WriteLine("마법사를 골랐습니다.");
+                    Thread.Sleep(1000);
+                    game.GameStart();
+                    break;
                         default:
                             Console.WriteLine("없는 직업입니다.");
                             Console.WriteLine("다시 정하세요");

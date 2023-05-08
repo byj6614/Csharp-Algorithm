@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bae_TexTRPG.Scene
+namespace Bae_TexTRPG
 {
     internal class MainMenuScene : Scene
     {
@@ -38,7 +38,7 @@ namespace Bae_TexTRPG.Scene
             switch (command)
             {
                 case 1:
-                    game.GameStart();
+                    game.ChoseJob();
                     Thread.Sleep(1000);
                     // ToDO :게임 시작
                     break;

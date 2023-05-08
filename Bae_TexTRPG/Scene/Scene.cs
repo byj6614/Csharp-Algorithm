@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bae_TexTRPG.Scene
+namespace Bae_TexTRPG
 {
     public abstract class Scene
     {
